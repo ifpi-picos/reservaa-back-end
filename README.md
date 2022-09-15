@@ -1,6 +1,6 @@
 # reservaai-back-end
 
-Projeto Integrador ll e Internet I 2022.2
+Projeto Integrador ll e Internet ll 2022.2
 
 Nome do Produto: RESERVAAÍ
 
