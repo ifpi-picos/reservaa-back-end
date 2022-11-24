@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize')
 
-const sequelize = new Sequelize(`postgres://btqacqcb:exDRiK2cTTAlggXRLFu09ZvWCuK3Ajsw@kesavan.db.elephantsql.com/btqacqcb`, { dialect: "postgres" })
+const sequelize = new Sequelize(`postgres://btqacqcb:${process.env.secretKey}@kesavan.db.elephantsql.com/btqacqcb`, { dialect: "postgres" })
 
 sequelize.authenticate().then(() => {
     console.log(`Database connected to discover`)
@@ -13,3 +13,5 @@ db.Sequelize = Sequelize
 db.sequelize = sequelize
 
 db.users = require('./userModel')(sequelize, DataTypes)
+
+module.exports = db
